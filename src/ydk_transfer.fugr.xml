@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Transfer of data between systems</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LYDK_TRANSFERTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLYDK_TRANSFER</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>YDK_RFC_TRANSFER_FINISH</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Completing the table download</SHORT_TEXT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>OK</PARAMETER>
+       <TYP>FLAG</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>OK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>The flag</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>YDK_RFC_TRANSFER_INIT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Initialization of data reception</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>TABNAME</PARAMETER>
+       <TYP>TABNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CLUSTER</PARAMETER>
+       <TYP>XSTRING</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CLRDATA</PARAMETER>
+       <TYP>YDK_TRANSFER_CLR_MODE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>MODIFY_MODE</PARAMETER>
+       <DEFAULT>&apos; &apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>YDK_TRANSFER_MODIFY_MODE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>LOGSYS</PARAMETER>
+       <TYP>LOGSYS</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>TABLE_NOT_FOUND</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>ERR_ON_CREATE_STRUCT</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>TABNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table name</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CLUSTER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Data</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CLRDATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Update operation mode</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>MODIFY_MODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Update mode (modify)</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LOGSYS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Logical system</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TABLE_NOT_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>table not found</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ERR_ON_CREATE_STRUCT</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Error during host structure creation</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>YDK_RFC_TRANSFER_POSTPROC</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Post processing, after copying</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>TABNAME</PARAMETER>
+       <TYP>TABNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>TEST</PARAMETER>
+       <TYP>FLAG</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>OK</PARAMETER>
+       <TYP>FLAG</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>TABNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table name</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TEST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Processing availability test for table</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Result</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>YDK_RFC_TRANSFER_RECIVE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Data reception by the sender</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>CLUSTER</PARAMETER>
+       <TYP>XSTRING</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CLUSTER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Data</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

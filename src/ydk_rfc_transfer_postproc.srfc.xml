@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SRFC" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SRFC>
+    <HEADER>
+     <ID>YDK_RFC_TRANSFER_POSTPROC</ID>
+     <VERSION>A</VERSION>
+     <FUNCNAME>YDK_RFC_TRANSFER_POSTPROC</FUNCNAME>
+     <CREATEDBY>VYGORDEEV</CREATEDBY>
+     <CREATEDON>2016-06-21</CREATEDON>
+     <CREATEDAT>08:57:34</CREATEDAT>
+    </HEADER>
+   </SRFC>
+  </asx:values>
+ </asx:abap>
+</abapGit>
