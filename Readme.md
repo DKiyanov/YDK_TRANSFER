@@ -9,6 +9,8 @@ There is, of course, a standard mandant copy, but it was not suitable for us for
 
 RFC connection with saved password or trust connection to the receiving system is required.
 
+To install this on SAP server, use [abapGit](https://docs.abapgit.org/)
+
 Starts with the program YDK_RFC_TABDATA_TRANSFER_RN.
 ![Program interface YDK_RFC_TABDATA_TRANSFER_RN](Interface.png)
 * **"Table name"** if not specified - all mandant-dependent tables will be selected for processing
